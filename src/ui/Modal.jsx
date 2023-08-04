@@ -53,10 +53,11 @@ const Button = styled.button`
   }
 `;
 
+//Compound components
 //1. Create an context
 const ModalContext = createContext();
 
-//d. Create a Parent component
+//2. Create a Parent component
 function Modal({ children }) {
   const [openName, setOpenName] = useState("");
 
