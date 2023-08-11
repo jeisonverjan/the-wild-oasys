@@ -14,7 +14,7 @@ import Spinner from "../../ui/Spinner";
 import { useState } from "react";
 import { useEffect } from "react";
 import { formatCurrency } from "../../utils/helpers";
-import { useCheckIn } from "./useCheckIn";
+import { useCheckin } from "./useCheckin";
 import { useSettings } from "../settings/useSettings";
 
 const Box = styled.div`
@@ -46,10 +46,9 @@ function CheckinBooking() {
     numGuests,
     hasBreakfast,
     numNights,
-    isPaid,
   } = booking || {};
 
-  const { isCheckingIn, checkin } = useCheckIn();
+  const { isCheckingIn, checkin } = useCheckin();
   const breakfastPrice = settings?.breakfastPrice * numGuests * numNights;
 
   function handleCheckin() {
