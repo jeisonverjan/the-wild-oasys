@@ -1,4 +1,4 @@
-import styled from "styled-components";
+/* import styled from "styled-components";
 import { useUser } from "./useUser";
 
 const StyledUserAvatar = styled.div`
@@ -34,3 +34,14 @@ function UserAvatar() {
 }
 
 export default UserAvatar;
+ */
+
+function UserAvatar() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default UserAvatar
