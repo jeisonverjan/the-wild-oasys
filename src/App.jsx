@@ -18,8 +18,6 @@ import Checkin from "./pages/Checkin";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import { DarkModeProvider } from "./context/DarkModeContext";
 
-import keepAlive from "../api/serverless/keep-alive";
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -80,7 +78,6 @@ function App() {
           }}
         />
       </QueryClientProvider>
-      <button onClick={keepAlive}>click to switch</button>
     </DarkModeProvider>
   );
 }
