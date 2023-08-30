@@ -15,27 +15,27 @@ import { guests } from "./data-guests.js";
 
 export async function deleteGuests() {
   const { error } = await supabase.from("guests").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) console.log("error deleting guest", error.message);
 }
 
 export async function deleteCabins() {
   const { error } = await supabase.from("cabins").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) console.log("error deleting cabins", error.message);
 }
 
 export async function deleteBookings() {
   const { error } = await supabase.from("bookings").delete().gt("id", 0);
-  if (error) console.log(error.message);
+  if (error) console.log("error deleting bookings", error.message);
 }
 
 export async function createGuests() {
   const { error } = await supabase.from("guests").insert(guests);
-  if (error) console.log(error.message);
+  if (error) console.log("error creating guest", error.message);
 }
 
 export async function createCabins() {
   const { error } = await supabase.from("cabins").insert(cabins);
-  if (error) console.log(error.message);
+  if (error) console.log("error creating cabins", error.message);
 }
 
 export async function createBookings() {
@@ -92,8 +92,8 @@ export async function createBookings() {
     };
   });
 
-  console.log(finalBookings);
+  //console.log(finalBookings);
 
   const { error } = await supabase.from("bookings").insert(finalBookings);
-  if (error) console.log(error.message);
+  if (error) console.log("error creating bookings", error.message);
 }
