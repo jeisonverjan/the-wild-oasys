@@ -1,5 +1,5 @@
 import { isFuture, isPast, isToday } from "date-fns";
-import { subtractDates } from "../utils/helpers";
+import { subtractDates } from "../utils/helpers.js";
 import supabase from "../services/supabase.js";
 
 import { bookings } from "./data-bookings.js";
