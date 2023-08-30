@@ -1,13 +1,14 @@
-import axios from "axios";
+import { deleteBookings } from "../../src/data/Uploader";
+import { createBookings } from "../../src/data/Uploader";
 
 export default async function keepAlive() {
   console.log("serverless function executed");
   try {
-    await axios.get(
-      "https://qszbdfknevfygfstychp.supabase.co/storage/v1/object/public/cabin-images/cabin-001.jpg"
-    );
-    console.log("Successfully ping to Supabase.");
+    await deleteBookings();
+    console.log("Bookings successfully deleted");
+    await createBookings();
+    console.log("Bookings successfully updated");
   } catch (error) {
-    console.error("Failed to reach Supabase:", error.message);
+    console.log("Error while updating the bookings", error);
   }
 }

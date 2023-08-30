@@ -5,11 +5,10 @@
             "destination": "/"
         }
     ],
-    "functions": {
-        "api/serverless/keep-alive.js": {
-            "cron": [
-                "0 */5 * * * *"
-            ]
+    "crons": [
+        {
+            "path": "/api/serverless/keep-alive",
+            "schedule": "0 0 * * *"
         }
-    }
+    ]
 }
