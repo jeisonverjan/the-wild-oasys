@@ -1,5 +1,7 @@
-import { formatDistance, parseISO } from "date-fns";
-const differenceInDays = require("date-fns/esm/differenceInDays");
+import { formatDistance, parseISO, differenceInDays } from "date-fns";
+
+//import {differenceInDays} from "date-fns/esm/differenceInDays"
+//const differenceInDays = require("date-fns/esm/differenceInDays");
 //import differenceInDays from "date-fns/esm/differenceInDays";
 //import { differenceInDays } from 'date-fns/esm';
 
