@@ -1,10 +1,10 @@
 import { isFuture, isPast, isToday } from "date-fns";
-import supabase from "../services/supabase";
 import { subtractDates } from "../utils/helpers";
+import supabase from "../services/supabase.js";
 
-import { bookings } from "./data-bookings";
-import { cabins } from "./data-cabins";
-import { guests } from "./data-guests";
+import { bookings } from "./data-bookings.js";
+import { cabins } from "./data-cabins.js";
+import { guests } from "./data-guests.js";
 
 // const originalSettings = {
 //   minBookingLength: 3,
