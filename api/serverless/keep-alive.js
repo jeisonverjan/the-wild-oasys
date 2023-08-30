@@ -1,5 +1,5 @@
-import { deleteBookings } from "../../src/data/Uploader";
-import { createBookings } from "../../src/data/Uploader";
+import { deleteBookings } from "../../src/data/Uploader.jsx";
+import { createBookings } from "../../src/data/Uploader.jsx";
 
 export default async function keepAlive() {
   console.log("serverless function executed");
